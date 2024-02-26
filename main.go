@@ -15,6 +15,7 @@ func main() {
 	}
 
 	http.HandleFunc("/", HelloHandler)
+	http.HandleFunc("/new", NewHandler)
 
 	log.Println("Listening on port", port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%s", port), nil))
@@ -25,6 +26,5 @@ func HelloHandler(w http.ResponseWriter, _ *http.Request) {
 }
 
 func NewHandler(w http.ResponseWriter, _ *http.Request) {
-
 	fmt.Fprintf(w, "Hello from Koyeb NEW ROUTE")
 }
