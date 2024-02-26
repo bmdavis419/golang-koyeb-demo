@@ -23,3 +23,8 @@ func main() {
 func HelloHandler(w http.ResponseWriter, _ *http.Request) {
 	fmt.Fprintf(w, "Hello from Koyeb")
 }
+
+func NewHandler(w http.ResponseWriter, _ *http.Request) {
+
+	fmt.Fprintf(w, "Hello from Koyeb NEW ROUTE")
+}
